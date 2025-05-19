@@ -84,7 +84,8 @@ The pipeline is composed of the following components:
 
 ## 📎 Report & Presentation
 
-- [📄 Final Project Report (PDF)](link) <!-- Replace with your own link -->
+- [📄 Final Project Report (PDF)](https://github.com/akshaysodha/big-data-healthcare-fraud-detection/blob/main/Big%20Data%20Medicare%20Fraud%20Detection%20Project%20Report.pdf)
+
 - [🎥 Elevator Pitch Video](https://youtu.be/H5RJK-znUAQ?si=SrhkfppODR45VWNp)
 - [🗂️ Trello Dashboard](https://trello.com/invite/b/vWHhpPvj/ATTI35053ec29557657968413232b04859899E4D863A/big-data)
 
