@@ -2,27 +2,29 @@
 
 A real-time, scalable fraud detection system built using Apache Spark, Apache Kafka, Docker, and machine learning. This term project was developed as part of **DATA 228 - Big Data Technologies** during the MS in Data Analytics program at **San José State University**.
 
-## 🔍 Problem Statement
+## 📌 Project Summary
 
-Medicare fraud results in billions of dollars in annual losses and threatens the integrity of the U.S. healthcare system. Our project aims to build a big data pipeline capable of identifying fraudulent activities by leveraging real-time data processing and machine learning models.
+Billions of dollars are lost every year due to Medicare fraud. This project tackles the issue using a distributed big data pipeline that ingests, processes, and analyzes healthcare data in real-time. We combine the power of Apache Kafka, Spark, and logistic regression to build a responsive system that flags potentially fraudulent cases from multiple data sources.
 
 ## 🛠️ Tech Stack
 
-- **Apache Kafka** – Real-time data ingestion  
-- **Apache Spark** – Distributed data processing  
-- **Docker** – Containerization of the pipeline  
-- **Python (scikit-learn)** – Logistic Regression model  
-- **Pandas, Seaborn, Power BI, Tableau** – Data analysis & visualization  
-- **Google Colab, GitHub** – Collaboration & version control
+- **Apache Kafka** – Real-time data ingestion via producer/consumer topics
+- **Apache Spark** – Distributed stream processing and transformations
+- **Docker** – Containerized orchestration for scalable deployment
+- **Python (scikit-learn)** – Logistic regression model for fraud prediction
+- **Pandas, Seaborn, Power BI, Tableau** – Data analysis & visualization
+- **Trello, Google Colab, GitHub** – Agile collaboration & version control
+
+---
 
 ## 🧱 Architecture Overview
 
 The pipeline is composed of the following components:
 
 1. **Data Sources**:  
-   - CMS Part D Prescriber Dataset  
-   - LEIE Exclusion Dataset  
-   - Payments Received by Physicians Dataset
+   - CMS Part D Prescriber Dataset: Over 25M rows of Medicare prescription data  
+   - LEIE Exclusion Dataset: Exclusion records for fraudulent providers  
+   - Payments Received by Physicians Dataset: Pharmaceutical payments & transactions (~11M rows)
 
 2. **Data Ingestion with Kafka**:  
    Each dataset is streamed through a dedicated Kafka topic.
@@ -39,7 +41,7 @@ The pipeline is composed of the following components:
 6. **Containerization with Docker**:  
    Kafka and Spark components are containerized for portability and consistency across environments.
 
-![Pipeline Overview](https://github.com/leoncorreia/DATA228-termproject/blob/main/docs/pipeline-overview.png) <!-- Replace with your image path -->
+<!--![Pipeline Overview](https://github.com/leoncorreia/DATA228-termproject/blob/main/docs/pipeline-overview.png)  -->
 
 ## 📊 Key Features
 
@@ -49,7 +51,9 @@ The pipeline is composed of the following components:
 - Logistic Regression model trained on historical patterns
 - Clean, modular codebase with Docker-based deployment
 
+
 ## 📁 Repository Structure
+```bash
 
 ├── spark/ # Spark scripts and config
 ├── producer/ # Kafka producer code
@@ -60,7 +64,7 @@ The pipeline is composed of the following components:
 ├── docker-compose.yml # Docker orchestration
 ├── TestProject.ipynb # End-to-end pipeline walkthrough
 └── README.md
-
+```
 
 ## 🤝 Team Collaboration
 
@@ -74,33 +78,32 @@ The pipeline is composed of the following components:
 - **Metric Used**: AUC-ROC  
 - **Result**: 0.92  
 - **Insights**: Feature importance revealed EXCLTYPE categories and physician payment patterns as strong fraud indicators.
+- Balanced feature contribution: ensured via scaling and correlation analysis
 
-![AUC ROC Curve](https://github.com/leoncorreia/DATA228-termproject/blob/main/docs/auc-roc.png) <!-- Replace with your image -->
-
-## 🔒 Privacy Considerations
-
-Although k-anonymity wasn't implemented, the project highlights the importance of privacy-preserving techniques like k-anonymity and differential privacy for future deployment in production healthcare systems.
-
-## 🚀 Future Scope
-
-- Integration of deep learning models (e.g. autoencoders, ensemble models)
-- CI/CD pipeline for real-time model updates
-- Deployment to a cloud-based scalable infrastructure (e.g., GCP or AWS)
+<!-- ![AUC ROC Curve](https://github.com/leoncorreia/DATA228-termproject/blob/main/docs/auc-roc.png)  --> 
 
 ## 📎 Report & Presentation
 
 - [📄 Final Project Report (PDF)](link) <!-- Replace with your own link -->
-- [🎥 Elevator Pitch Video](link)
+- [🎥 Elevator Pitch Video](https://youtu.be/H5RJK-znUAQ?si=SrhkfppODR45VWNp)
 - [🗂️ Trello Dashboard](https://trello.com/invite/b/vWHhpPvj/ATTI35053ec29557657968413232b04859899E4D863A/big-data)
 
 
-## 🧠 Lessons Learned
+## 🧠 Key Skills Demonstrated
 
-This project demonstrated the complexity of building production-ready big data pipelines and the importance of integrating distributed systems, real-time streaming, and privacy-aware machine learning models in modern healthcare analytics.
+| Category             | Skills & Tools Used                                                                 |
+|----------------------|--------------------------------------------------------------------------------------|
+| Real-Time Streaming  | Apache Kafka (topics, producers, consumers), Spark Streaming                        |
+| Big Data Processing  | Apache Spark (dataframes, transformations, aggregations)                            |
+| Containerization     | Docker, Docker Compose (for reproducible Kafka + Spark setup)                       |
+| Machine Learning     | Logistic Regression (scikit-learn), AUC-ROC Evaluation, Feature Scaling             |
+| ETL & Data Cleaning  | PySpark, Pandas, Python scripting                                                   |
+| Similarity Analysis  | Locality-Sensitive Hashing (LSH), MinHash, Bucketing                                |
+| Visualization        | Seaborn, Power BI, Tableau                                                          |
+| Version Control      | Git, GitHub (repo structure, commits, collaborative code development)               |
+| Agile Development    | Scrum methodology, Trello board, Google Colab for pair programming                  |
+| Communication & Teamwork | Pair programming, Sprint planning, Regular team stand-ups, Joint documentation efforts |
+
 
 ---
-
-## 📌 Suggested Repository Name
-
-Consider renaming your GitHub repository to something like:
 
